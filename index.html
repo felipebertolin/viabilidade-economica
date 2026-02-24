@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Executivo — Viabilidade Econômica</title>
+    <meta name="description"
+        content="Dashboard Executivo de Viabilidade Econômica para campanha eleitoral com análise de benchmark, estratégia e execução de verba.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ═══════════════════════════════════════════ HEADER ═══════════════════════════════════════════ -->
+    <header class="header">
+        <div class="header-left">
+            <div class="header-logo">
+                <svg viewBox="0 0 40 40" fill="none">
+                    <circle cx="20" cy="20" r="18" stroke="url(#logoGrad)" stroke-width="2.5" fill="none" />
+
+                    <!-- Ascending Columns -->
+                    <!-- Column 1 -->
+                    <rect x="11" y="24" width="4" height="6" rx="1" fill="url(#logoGrad)" />
+                    <!-- Column 2 -->
+                    <rect x="18" y="19" width="4" height="11" rx="1" fill="url(#logoGrad)" />
+                    <!-- Column 3 -->
+                    <rect x="25" y="12" width="4" height="18" rx="1" fill="url(#logoGrad)" />
+
+                    <!-- Trend Line -->
+                    <path d="M13 22 L20 16 L27 9 L31 9" stroke="url(#logoGrad)" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+
+                    <defs>
+                        <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40">
+                            <stop offset="0%" stop-color="#D4AF37" />
+                            <stop offset="100%" stop-color="#50C878" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <div class="header-titles">
+                <h1>Painel de Inteligência Eleitoral</h1>
+                <p class="header-subtitle">Matriz de Alocação e Expansão</p>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                Análise Consolidada
+            </div>
+            <span class="header-date">Atualizado em 23 de fevereiro de 2026</span>
+        </div>
+    </header>
+
+    <!-- ═══════════════════════════════════════════ NAV TABS ═══════════════════════════════════════════ -->
+    <nav class="tabs">
+        <button class="tab active" data-tab="estrategia" id="tab-estrategia">
+            <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+            </svg>
+            Estratégia e Viabilidade
+        </button>
+        <button class="tab" data-tab="execucao" id="tab-execucao">
+            <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="5" width="20" height="14" rx="2" ry="2" />
+                <line x1="2" y1="10" x2="22" y2="10" />
+                <line x1="7" y1="15" x2="7" y2="15" />
+                <line x1="12" y1="15" x2="12" y2="15" />
+            </svg>
+            Execução de Verba (14 Cand.)
+        </button>
+        <button class="tab" data-tab="elite7" id="tab-elite7">
+            <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            Execução de Verba (Elite 7)
+        </button>
+    </nav>
+
+    <main class="main-content">
+
+        <!-- ═══════════════════════════════ PÁGINA 1 — ESTRATÉGIA ═══════════════════════════════ -->
+        <section class="page active" id="page-estrategia">
+
+            <!-- Benchmark Section -->
+            <div class="section-label">
+                <span class="label-icon">📊</span>
+                Benchmark — Oportunidade de Mercado
+            </div>
+
+            <div class="benchmark-cards">
+                <div class="kpi-card kpi-gold animate-card" style="--delay: 0.1s">
+                    <div class="kpi-header">
+                        <div class="kpi-icon-wrap gold-bg">
+                            <svg class="premium-icon" viewBox="0 0 24 24">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                            </svg>
+                        </div>
+                        <span class="kpi-label">Benchmarking IBPAD</span>
+                    </div>
+                    <div class="kpi-value glow-gold" data-value="373000" data-prefix="R$ " data-separator=".">R$ 373.000
+                    </div>
+                    <p class="kpi-detail">Gasto médio de campanha vitoriosa (Dep. Estadual).</p>
+                    <span class="kpi-tag gold-tag">Referência Histórica</span>
+                </div>
+
+                <div class="kpi-card kpi-emerald animate-card" style="--delay: 0.2s">
+                    <div class="kpi-header">
+                        <div class="kpi-icon-wrap emerald-bg">
+                            <svg class="premium-icon" viewBox="0 0 24 24">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg>
+                        </div>
+                        <span class="kpi-label">Proposta Pé Direito</span>
+                    </div>
+                    <div class="kpi-value glow-emerald" data-value="200000" data-prefix="R$ " data-separator=".">R$
+                        200.000</div>
+                    <p class="kpi-detail">Custo otimizado via inteligência e compartilhamento.</p>
+                    <span class="kpi-range">Margem Reduzida em 25%</span>
+                </div>
+
+                <div class="kpi-card kpi-highlight animate-card" style="--delay: 0.3s">
+                    <div class="kpi-header">
+                        <div class="kpi-icon-wrap highlight-bg">
+                            <svg class="premium-icon" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                        </div>
+                        <span class="kpi-label">Eficiência Mensurada</span>
+                    </div>
+                    <div class="kpi-value glow-gold kpi-percent" data-value="46" data-suffix="%">46%</div>
+                    <p class="kpi-detail">Economia total gerada por vaga disputada.</p>
+                    <span class="kpi-tag emerald-tag">Performance Elite</span>
+                </div>
+            </div>
+
+            <!-- Strategic Highlight -->
+            <div class="strategic-section animate-card" style="--delay: 0.4s">
+                <div class="strategic-hero">
+                    <div class="strategic-text">
+                        <span class="strategic-eyebrow">DESTAQUE ESTRATÉGICO</span>
+                        <h2 class="strategic-title">Como eleger <span class="gold-text">14 deputados</span> com o
+                            orçamento de <span class="emerald-text">7</span>?</h2>
+                        <p class="strategic-desc">A estratégia descentralizada do Projeto Pé Direito permite cobrir mais
+                            territórios com menos recursos, usando tecnologia e integração de campanhas em um
+                            ecossistema único.</p>
+                    </div>
+                </div>
+
+                <div class="infographic">
+                    <div class="infographic-card isolated" data-title="Limitações Geográficas e Logísticas"
+                        data-detail="O modelo tradicional depende de estruturas físicas locais e deslocamento terrestre. Devido ao alto custo de combustível e tempo de estrada, a presença física é restrita a um raio de 60 municípios próximos à base. Sem inteligência de dados, a campanha opera no 'escuro', investindo verba de forma linear sem distinguir o potencial real de conversão de cada praça.">
+                        <div class="infographic-icon">
+                            <svg viewBox="0 0 48 48" fill="none">
+                                <circle cx="24" cy="24" r="22" stroke="#EF4444" stroke-width="2" stroke-dasharray="4 4"
+                                    opacity="0.5" />
+                                <circle cx="24" cy="24" r="8" fill="#EF4444" opacity="0.3" />
+                                <circle cx="24" cy="24" r="3" fill="#EF4444" />
+                            </svg>
+                        </div>
+                        <h4>Campanha Isolada</h4>
+                        <p>Alcance limitado a 1 região</p>
+                        <div class="infographic-bar">
+                            <div class="bar-fill bar-red" style="width: 15%"></div>
+                        </div>
+                        <span class="bar-label">~60 municípios</span>
+                    </div>
+
+                    <div class="infographic-vs">
+                        <span>VS</span>
+                    </div>
+
+                    <div class="infographic-card integrated" data-title="Domínio Territorial Total (853 Municípios)"
+                        data-detail="Integração multicamadas para cobertura estadual:<br><br><strong>Capilaridade Digital:</strong> Atuação nos 853 municípios via App Pé Direito, com captação de dados e disparos segmentados por WhatsApp.<br><br><strong>Mobilidade Aérea:</strong> Cobertura de cidades-polo em tempo recorde, transformando viagens de 6h em voos de 1h.<br><br><strong>Mapa de Aceitação (Heatmap):</strong> Nossa inteligência de dados mapeou o discurso do candidato em tempo real. O deslocamento só ocorre em cidades com 'termômetro de aceitação' positivo, eliminando desperdício de recurso em zonas de baixa conversão.">
+                        <div class="infographic-icon">
+                            <svg viewBox="0 0 48 48" fill="none">
+                                <circle cx="24" cy="24" r="22" stroke="#50C878" stroke-width="2" opacity="0.5" />
+                                <circle cx="24" cy="24" r="16" stroke="#50C878" stroke-width="1.5" opacity="0.3" />
+                                <circle cx="24" cy="24" r="10" stroke="#D4AF37" stroke-width="1.5" opacity="0.5" />
+                                <circle cx="24" cy="24" r="4" fill="#50C878" />
+                                <circle cx="10" cy="18" r="2" fill="#D4AF37" opacity="0.7" />
+                                <circle cx="38" cy="20" r="2" fill="#D4AF37" opacity="0.7" />
+                                <circle cx="16" cy="38" r="2" fill="#50C878" opacity="0.7" />
+                                <circle cx="34" cy="36" r="2" fill="#50C878" opacity="0.7" />
+                                <circle cx="12" cy="30" r="1.5" fill="#D4AF37" opacity="0.5" />
+                                <circle cx="36" cy="12" r="1.5" fill="#50C878" opacity="0.5" />
+                            </svg>
+                        </div>
+                        <h4>Ecossistema Integrado</h4>
+                        <p>App Pé Direito + Cobertura Aérea</p>
+                        <div class="infographic-bar">
+                            <div class="bar-fill bar-green" style="width: 100%"></div>
+                        </div>
+                        <span class="bar-label">853 municípios</span>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- ═══════════════════════════════ PÁGINA 2 — EXECUÇÃO ═══════════════════════════════ -->
+        <section class="page" id="page-execucao">
+
+            <div class="section-label">
+                <span class="label-icon">💰</span>
+                Execução de Verba — Detalhamento por Candidato (Deputado Estadual)
+            </div>
+
+            <!-- Summary Cards -->
+            <div class="exec-summary-cards">
+                <div class="exec-summary-card animate-card" style="--delay: 0.1s">
+                    <span class="exec-summary-label">Investimento Base / Candidato</span>
+                    <span class="exec-summary-value gold-text">R$ 200.000</span>
+                    <span class="exec-summary-range">Faixa: R$ 180k — R$ 220k</span>
+                </div>
+                <div class="exec-summary-card animate-card" style="--delay: 0.2s">
+                    <span class="exec-summary-label">TOTAL 14 CAND. + 1 FEDERAL</span>
+                    <span class="exec-summary-value emerald-text">R$ 3.292.500</span>
+                    <span class="exec-summary-range">Faixa: R$ 2,96M — R$ 3,62M</span>
+                </div>
+                <div class="exec-summary-card animate-card" style="--delay: 0.3s">
+                    <span class="exec-summary-label">Nº de Rubricas</span>
+                    <span class="exec-summary-value" style="color: #8B9DC3;">7</span>
+                    <span class="exec-summary-range">Categorias de investimento</span>
+                </div>
+            </div>
+
+            <!-- Expense Table -->
+            <div class="table-container animate-card" style="--delay: 0.4s">
+                <div class="table-header-row">
+                    <h3>Tabela de Gastos por Rubrica</h3>
+                    <span class="table-badge">Margem de Segurança: ± 10%</span>
+                </div>
+                <div class="table-scroll">
+                    <table class="expense-table" id="expense-table">
+                        <thead>
+                            <tr>
+                                <th class="th-rubrica">Rubrica</th>
+                                <th class="th-desc">Descrição</th>
+                                <th class="th-value">Investimento Base (R$)</th>
+                                <th class="th-range">Margem ± 10%</th>
+                                <th class="th-bar">Peso</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row-highlight">
+                                <td>
+                                    <div class="rubrica-cell"
+                                        data-detail="Gerenciamento de anúncios (Meta Ads/Google Ads), assinatura de plataformas de disparo em massa (WhatsApp API), licenciamento de software de edição, criação de Landing Pages segmentadas, SEO político e monitoramento de menções em tempo real.">
+                                        <span class="rubrica-icon premium"
+                                            style="background: rgba(99,102,241,0.1); color: #818CF8;">
+                                            <svg class="premium-icon" viewBox="0 0 24 24">
+                                                <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                                                <polyline points="16 6 12 2 8 6" />
+                                                <line x1="12" y1="2" x2="12" y2="15" />
+                                            </svg>
+                                        </span>
+                                        Propaganda e Digital
+                                    </div>
+                                </td>
+                                <td class="td-desc">Impulsionamento (Meta/Google), Sites, Disparos de Mensagens e
+                                    Estratégia Digital</td>
+                                <td class="td-value"><strong>R$ 50.000</strong></td>
+                                <td class="td-range">R$ 45k — R$ 55k</td>
+                                <td class="td-bar">
+                                    <div class="mini-bar">
+                                        <div class="mini-bar-fill"
+                                            style="width: 21.3%; background: linear-gradient(90deg, #818CF8, #6366F1);">
+                                        </div>
+                                    </div>
+                                    <span class="bar-pct">21,3%</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="rubrica-cell"
+                                        data-detail="Honorários de assessoria jurídica e contábil eleitoral, equipe de mobilização de rua (cabos eleitorais), secretariado administrativo, suporte de TI 24/7 para o App Pé Direito e coordenadores de voluntariado.">
+                                        <span class="rubrica-icon premium"
+                                            style="background: rgba(212,175,55,0.1); color: #D4AF37;">
+                                            <svg class="premium-icon" viewBox="0 0 24 24">
+                                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                                <circle cx="9" cy="7" r="4" />
+                                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                            </svg>
+                                        </span>
+                                        Capital Humano e Operação
+                                    </div>
+                                </td>
+                                <td class="td-desc">Equipe de Rua, Secretariado, TI e Coordenação</td>
+                                <td class="td-value"><strong>R$ 45.000</strong></td>
+                                <td class="td-range">R$ 40,5k — R$ 49,5k</td>
+                                <td class="td-bar">
+                                    <div class="mini-bar">
+                                        <div class="mini-bar-fill"
+                                            style="width: 19.1%; background: linear-gradient(90deg, #D4AF37, #F0D060);">
+                                        </div>
+                                    </div>
+                                    <span class="bar-pct">19,1%</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="rubrica-cell"
+                                        data-detail="Impressão de santinhos (gramaturas variadas), produção de praguinhas e adesivos perfurados para veículos, confecção de windbanners e bandeiras de alta resistência, instalação de placas em comitês e locação de cavaletes.">
+                                        <span class="rubrica-icon premium"
+                                            style="background: rgba(80,200,120,0.1); color: #50C878;">
+                                            <svg class="premium-icon" viewBox="0 0 24 24">
+                                                <path
+                                                    d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.57 3.91a2 2 0 0 0 1.66 0l8.57-3.9a1 1 0 0 0 0-1.83Z" />
+                                                <path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65" />
+                                                <path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65" />
+                                            </svg>
+                                        </span>
+                                        Material Físico e Visibilidade
+                                    </div>
+                                </td>
+                                <td class="td-desc">Santinhos, Adesivos, Bandeiras e Placas</td>
+                                <td class="td-value"><strong>R$ 35.000</strong></td>
+                                <td class="td-range">R$ 31,5k — R$ 38,5k</td>
+                                <td class="td-bar">
+                                    <div class="mini-bar">
+                                        <div class="mini-bar-fill"
+                                            style="width: 14.9%; background: linear-gradient(90deg, #50C878, #34D399);">
+                                        </div>
+                                    </div>
+                                    <span class="bar-pct">14,9%</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="rubrica-cell"
+                                        data-detail="Combustível (Gasolina/Diesel), depreciação e manutenção preventiva de veículos, seguro de frota temporário, alimentação de equipes externas (diárias), locação de espaços para reuniões rápidas e pedágios em rotas estratégicas.">
+                                        <span class="rubrica-icon premium"
+                                            style="background: rgba(251,146,60,0.1); color: #FB923C;">
+                                            <svg class="premium-icon" viewBox="0 0 24 24">
+                                                <rect x="1" y="3" width="15" height="13" />
+                                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                                                <circle cx="5.5" cy="18.5" r="2.5" />
+                                                <circle cx="18.5" cy="18.5" r="2.5" />
+                                            </svg>
+                                        </span>
+                                        Logística e Campo
+                                    </div>
+                                </td>
+                                <td class="td-desc">Combustível, Alimentação e Segurança</td>
+                                <td class="td-value"><strong>R$ 20.000</strong></td>
+                                <td class="td-range">R$ 18k — R$ 22k</td>
+                                <td class="td-bar">
+                                    <div class="mini-bar">
+                                        <div class="mini-bar-fill"
+                                            style="width: 8.5%; background: linear-gradient(90deg, #FB923C, #F97316);">
+                                        </div>
+                                    </div>
+                                    <span class="bar-pct">8,5%</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="rubrica-cell"
+                                        data-detail="Compra de bases de dados georreferenciadas, softwares de análise de sentimento (Social Listening), confecção de mapas de calor por zona eleitoral, pesquisas de opinião quantitativas/qualitativas e mineração de dados para identificação de indecisos.">
+                                        <span class="rubrica-icon premium"
+                                            style="background: rgba(56,189,248,0.1); color: #38BDF8;">
+                                            <svg class="premium-icon" viewBox="0 0 24 24">
+                                                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                                            </svg>
+                                        </span>
+                                        Inteligência e Dados
+                                    </div>
+                                </td>
+                                <td class="td-desc">Criação de Mapas de Pesquisa e Análise de Dados</td>
+                                <td class="td-value"><strong>R$ 40.000</strong></td>
+                                <td class="td-range">R$ 36k — R$ 44k</td>
+                                <td class="td-bar">
+                                    <div class="mini-bar">
+                                        <div class="mini-bar-fill"
+                                            style="width: 17.0%; background: linear-gradient(90deg, #38BDF8, #0EA5E9);">
+                                        </div>
+                                    </div>
+                                    <span class="bar-pct">17,0%</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="rubrica-cell"
+                                        data-detail="Gestão de crises de imagem, reparos emergenciais em infraestrutura de som, variação súbita no preço de insumos gráficos, multas administrativas leves e reforço de contingência em segurança para eventos de grande porte.">
+                                        <span class="rubrica-icon premium"
+                                            style="background: rgba(168,85,247,0.1); color: #A855F7;">
+                                            <svg class="premium-icon" viewBox="0 0 24 24">
+                                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                            </svg>
+                                        </span>
+                                        Fundo de Imprevistos
+                                    </div>
+                                </td>
+                                <td class="td-desc">Reserva de contingência operacional</td>
+                                <td class="td-value"><strong>R$ 10.000</strong></td>
+                                <td class="td-range">R$ 9k — R$ 11k</td>
+                                <td class="td-bar">
+                                    <div class="mini-bar">
+                                        <div class="mini-bar-fill"
+                                            style="width: 4.2%; background: linear-gradient(90deg, #A855F7, #9333EA);">
+                                        </div>
+                                    </div>
+                                    <span class="bar-pct">4,2%</span>
+                                </td>
+                            </tr>
+                            <tr class="row-shared">
+                                <td>
+                                    <div class="rubrica-cell" data-detail="Logística Aérea e Mobilização Regional Hubs">
+                                        <span class="rubrica-icon premium"
+                                            style="background: rgba(236,72,153,0.1); color: #ec4899;">
+                                            <svg class="premium-icon" viewBox="0 0 24 24">
+                                                <path d="M12 2L2 22l10-5 10 5L12 2z" />
+                                            </svg>
+                                        </span>
+                                        Estrutura Compartilhada (Federal)
+                                    </div>
+                                </td>
+                                <td class="td-desc">Logística Aérea e Mobilização Regional Hubs</td>
+                                <td class="td-value"><strong>R$ 492.500</strong></td>
+                                <td class="td-range">-</td>
+                                <td class="td-bar">
+                                    <div class="mini-bar">
+                                        <div class="mini-bar-fill"
+                                            style="width: 15.0%; background: linear-gradient(90deg, #ec4899, #f472b6);">
+                                        </div>
+                                    </div>
+                                    <span class="bar-pct">15,0%</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="total-row">
+                                <td colspan="2"><strong>TOTAL POR CANDIDATO</strong></td>
+                                <td class="td-value"><strong class="gold-text">R$ 200.000</strong></td>
+                                <td class="td-range"><strong>R$ 180k — R$ 220k</strong></td>
+                                <td class="td-bar"><span class="bar-pct"
+                                        style="color: #D4AF37; font-weight: 700;">100%</span></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Donut Chart -->
+            <div class="donut-section animate-card" style="--delay: 0.5s">
+                <h3>Composição do Investimento</h3>
+                <p class="donut-subtitle">Distribuição por rubrica — por candidato</p>
+                <div class="donut-container">
+                    <svg class="donut-chart" viewBox="0 0 200 200">
+                        <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(255,255,255,0.05)"
+                            stroke-width="30" />
+                        <!-- Propaganda 21.3% = 107.06 -->
+                        <circle cx="100" cy="100" r="80" fill="none" stroke="#6366F1" stroke-width="30"
+                            stroke-dasharray="107.06 395.59" stroke-dashoffset="107.06" class="donut-segment" />
+                        <!-- Capital Humano 19.1% = 96.01 -->
+                        <circle cx="100" cy="100" r="80" fill="none" stroke="#D4AF37" stroke-width="30"
+                            stroke-dasharray="96.01 406.64" stroke-dashoffset="0" class="donut-segment" />
+                        <!-- Material 14.9% = 74.89 -->
+                        <circle cx="100" cy="100" r="80" fill="none" stroke="#50C878" stroke-width="30"
+                            stroke-dasharray="74.89 427.76" stroke-dashoffset="-96.01" class="donut-segment" />
+                        <!-- Logística 8.5% = 42.73 -->
+                        <circle cx="100" cy="100" r="80" fill="none" stroke="#FB923C" stroke-width="30"
+                            stroke-dasharray="42.73 459.92" stroke-dashoffset="-170.90" class="donut-segment" />
+                        <!-- Inteligência 17.0% = 85.45 -->
+                        <circle cx="100" cy="100" r="80" fill="none" stroke="#38BDF8" stroke-width="30"
+                            stroke-dasharray="85.45 417.20" stroke-dashoffset="-213.63" class="donut-segment" />
+                        <!-- Imprevistos 4.2% = 21.11 -->
+                        <circle cx="100" cy="100" r="80" fill="none" stroke="#A855F7" stroke-width="30"
+                            stroke-dasharray="21.11 481.54" stroke-dashoffset="-299.08" class="donut-segment" />
+                        <!-- Estrutura Compartilhada 15.0% = 75.40 -->
+                        <circle cx="100" cy="100" r="80" fill="none" stroke="#ec4899" stroke-width="30"
+                            stroke-dasharray="75.40 427.25" stroke-dashoffset="-320.19" class="donut-segment" />
+                        <text x="100" y="94" text-anchor="middle" fill="#fff" font-size="16" font-weight="700"
+                            font-family="Inter, sans-serif">R$ 3.29M</text>
+                        <text x="100" y="112" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="9"
+                            font-family="Inter, sans-serif">Global</text>
+                    </svg>
+                    <div class="donut-legend">
+                        <div class="legend-row"><span class="legend-color" style="background: #6366F1;"></span>
+                            Propaganda e Digital <span class="legend-val">21,3%</span></div>
+                        <div class="legend-row"><span class="legend-color" style="background: #D4AF37;"></span> Capital
+                            Humano <span class="legend-val">19,1%</span></div>
+                        <div class="legend-row"><span class="legend-color" style="background: #50C878;"></span> Material
+                            Físico e Visibilidade <span class="legend-val">14,9%</span></div>
+                        <div class="legend-row"><span class="legend-color" style="background: #FB923C;"></span>
+                            Logística e Campo <span class="legend-val">8,5%</span></div>
+                        <div class="legend-row"><span class="legend-color" style="background: #38BDF8;"></span>
+                            Inteligência e Dados <span class="legend-val">17,0%</span></div>
+                        <div class="legend-row"><span class="legend-color" style="background: #A855F7;"></span> Fundo de
+                            Imprevistos <span class="legend-val">4,2%</span></div>
+                        <div class="legend-row"><span class="legend-color" style="background: #ec4899;"></span>
+                            Estrutura
+                            Compartilhada <span class="legend-val">15,0%</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shared Structure (Federal) -->
+            <div class="section-label" style="margin-top: 32px;">
+                <span class="label-icon">🏛️</span>
+                Estrutura Compartilhada — Federal
+            </div>
+
+            <div class="shared-cards">
+                <div class="shared-card helicopter-card animate-card flip-container" style="--delay: 0.6s">
+                    <div class="flipper">
+                        <!-- FRENTE -->
+                        <div class="front">
+                            <div class="shared-card-header"
+                                style="display: flex; justify-content: space-between; align-items: flex-start;">
+                                <div class="shared-icon-wrap">
+                                    <svg class="premium-icon" viewBox="0 0 24 24">
+                                        <path d="M2 3l20 2v2L2 5V3z" />
+                                        <path d="M12 5v4" />
+                                        <path d="M8 9h8" />
+                                        <path d="M10 12l-2 9h4l2-9h-4z" />
+                                        <path d="M14 12l2 9h4l-2-9h-4z" />
+                                    </svg>
+                                </div>
+                                <button class="btn-flip" onclick="toggleFlip(this)">
+                                    Ver Estratégia
+                                    <svg viewBox="0 0 24 24" fill="none" class="flip-icon">
+                                        <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M3 3v5h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <h4>Logística Aérea</h4>
+                            <p class="shared-desc">Mobilidade estratégica para otimização de agendas em todo território
+                                mineiro.</p>
+
+                            <div class="shared-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Investimento</span>
+                                    <span class="spec-value gold-text">R$ 292.500</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Margem ±10%</span>
+                                    <span class="spec-value">R$ 263k — 322k</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Cobertura</span>
+                                    <span class="spec-value">Todo MG</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Escopo</span>
+                                    <span class="spec-value">14 Estaduais</span>
+                                </div>
+                            </div>
+
+                            <div class="shared-justification">
+                                <strong>Justificativa Estratégica</strong>
+                                Permite cobrir múltiplas agendas em regiões distantes, multiplicando a presença
+                                regional.
+                            </div>
+                        </div>
+
+                        <!-- VERSO -->
+                        <div class="back">
+                            <div class="back-header">
+                                <h5>Estratégia: Logística Aérea</h5>
+                                <button class="btn-flip-back" title="Voltar" onclick="toggleFlip(this)">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="back-content custom-scrollbar">
+                                <p class="back-intro">
+                                    A ciência já provou: o eleitor não vota com a cabeça, vota com o coração. Uma
+                                    pesquisa da Frontiers in Psychology mostrou que 72% do que convence um eleitor é
+                                    pura emoção. A lógica vem depois.
+                                </p>
+                                <p class="back-intro">
+                                    Se você quer ser visto como um líder vitorioso, o helicóptero não é um gasto — é o
+                                    seu maior cabo eleitoral. Veja o porquê:
+                                </p>
+
+                                <div class="back-hidden-wrapper">
+                                    <div class="back-hidden-inner">
+                                        <h6>1. O Efeito "UAU": Saia do Comum</h6>
+                                        <p>Enquanto seu adversário chega de carro e fica preso no trânsito, você desce
+                                            do céu.</p>
+                                        <ul>
+                                            <li><strong>Impacto Imediato:</strong> O barulho das hélices e a imagem da
+                                                aeronave geram curiosidade e admiração.</li>
+                                            <li><strong>Status de Líder:</strong> Quem chega de helicóptero passa a
+                                                imagem de quem tem poder, agilidade e está pronto para grandes decisões.
+                                            </li>
+                                        </ul>
+
+                                        <h6>2. Memória Inesquecível (O Candidato que "Voou")</h6>
+                                        <p>As pessoas esquecem o que você disse no palanque, mas nunca esquecem o dia em
+                                            que um helicóptero pousou na cidade delas.</p>
+                                        <ul>
+                                            <li><strong>Recall Positivo:</strong> Você vira o assunto das conversas no
+                                                jantar.</li>
+                                            <li><strong>Viralização:</strong> Todo mundo saca o celular para filmar.
+                                                Você ganha propaganda gratuita e orgânica nas redes sociais.</li>
+                                        </ul>
+
+                                        <h6>3. Otimização de ROI e Rendimentos Decrescentes</h6>
+                                        <p>Na economia, a Lei dos Rendimentos Decrescentes prova que injetar recursos
+                                            infinitos em um mesmo território satura o mercado e encarece o voto.</p>
+                                        <p><strong>Fuga da Saturação:</strong> O helicóptero permite romper essa
+                                            barreira. Ele nos tira de praças onde o custo do voto já está inflacionado e
+                                            nos leva rapidamente para novos locais onde o eleitorado ainda é 'barato' e
+                                            receptivo.</p>
+                                        <p><strong>Maximização do ROI:</strong> Em vez de gastar R$ 500 para espremer um
+                                            último eleitor na capital, usamos a mobilidade aérea para conquistar dezenas
+                                            de eleitores pelo mesmo valor no interior, multiplicando o Retorno sobre o
+                                            Investimento (ROI) da campanha.</p>
+
+                                        <h6>O Confronto de Imagem:</h6>
+                                        <div class="minimal-table-container">
+                                            <table class="minimal-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Situação</th>
+                                                        <th>Chegada de Carro</th>
+                                                        <th>Chegada de Helicóptero</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Atenção</td>
+                                                        <td>Passa despercebido</td>
+                                                        <td>Para a cidade inteira</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Imagem</td>
+                                                        <td>"Mais do mesmo"</td>
+                                                        <td>Autoridade máxima</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Velocidade</td>
+                                                        <td>Lento e limitado</td>
+                                                        <td>Onipresente e dinâmico</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sentimento</td>
+                                                        <td>Rotina</td>
+                                                        <td>Entusiasmo e Vitória</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <p class="source-link">Fonte: <a
+                                                href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8793837/"
+                                                target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC8793837/</a>
+                                        </p>
+
+                                        <h6>O Fator Esquecimento:</h6>
+                                        <p>A pesquisa de Beth Miller (2013) sobre memória de campanha demonstra que
+                                            eleitores lembram muito menos sobre candidatos do que se esperaria, e que
+                                            informações concorrentes atrapalham a lembrança ("interferência"). Isso
+                                            significa que um candidato que gera um evento memorável — como chegar de
+                                            helicóptero — pode se beneficiar ao criar uma "marca emocional" que resiste
+                                            melhor ao esquecimento do que propostas técnicas.</p>
+                                        <p class="source-link">Fonte: <a
+                                                href="https://onlinelibrary.wiley.com/doi/abs/10.1111/pops.12002"
+                                                target="_blank">https://onlinelibrary.wiley.com/doi/abs/10.1111/pops.12002</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <button class="btn-read-more" onclick="toggleReadMore(this)">
+                                    <span>Leia Mais</span>
+                                    <svg viewBox="0 0 24 24" fill="none" class="chevron">
+                                        <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shared-card mobilization-card animate-card flip-container" style="--delay: 0.7s">
+                    <div class="flipper">
+                        <!-- FRENTE -->
+                        <div class="front">
+                            <div class="shared-card-header"
+                                style="display: flex; justify-content: space-between; align-items: flex-start;">
+                                <div class="shared-icon-wrap emerald-icon">
+                                    <svg class="premium-icon" viewBox="0 0 24 24">
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                        <circle cx="9" cy="7" r="4" />
+                                        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                    </svg>
+                                </div>
+                                <button class="btn-flip" onclick="toggleFlip(this)">
+                                    Ver Estratégia
+                                    <svg viewBox="0 0 24 24" fill="none" class="flip-icon">
+                                        <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M3 3v5h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <h4>Mobilização Regional</h4>
+                            <p class="shared-desc">Capilaridade presencial para suporte local de rua e eventos
+                                coordenados.</p>
+
+                            <div class="shared-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Investimento</span>
+                                    <span class="spec-value emerald-text">R$ 200.000</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Margem ±10%</span>
+                                    <span class="spec-value">R$ 180k — 220k</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Equipe</span>
+                                    <span class="spec-value">100 Pessoas</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Regiões Hub</span>
+                                    <span class="spec-value">12 Mesorregiões</span>
+                                </div>
+                            </div>
+
+                            <div class="shared-justification">
+                                <strong>Justificativa Estratégica</strong>
+                                Complementa a mobilização digital com presença física exclusiva do ecossistema.
+                            </div>
+                        </div>
+
+                        <!-- VERSO -->
+                        <div class="back">
+                            <div class="back-header">
+                                <h5>Estratégia: Mobilização Regional</h5>
+                                <button class="btn-flip-back" title="Voltar" onclick="toggleFlip(this)">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="back-content custom-scrollbar">
+                                <p class="back-intro">
+                                    A Ilusão Digital: Por que "Likes" não garantem eleição.
+                                </p>
+                                <p class="back-intro">
+                                    O marketing digital constrói a narrativa, mas é a infantaria de rua que garante o
+                                    voto na urna. Estudos clássicos de ciência política sobre Get Out The Vote
+                                    (Mobilização Eleitoral) provam que o contato interpessoal é a tática com a maior
+                                    taxa de conversão direta em votos.
+                                </p>
+                                <p class="back-intro">
+                                    Ter 100 pessoas divididas em 12 mesorregiões não é gasto com folha de pagamento, é a
+                                    criação de um Exército de Conversão. Veja o porquê:
+                                </p>
+
+                                <div class="back-hidden-wrapper">
+                                    <div class="back-hidden-inner">
+                                        <h6>1. O Gatilho da Prova Social (O "Efeito Manada")</h6>
+                                        <p>O eleitor indeciso tende a votar em quem parece que vai ganhar.</p>
+                                        <p>Quando a sua campanha domina as ruas, os semáforos e os eventos locais,
+                                            cria-se uma percepção de vitória inevitável.</p>
+                                        <p>O volume físico de pessoas mobilizadas intimida os adversários e atrai
+                                            financiadores e aliados locais.</p>
+
+                                        <h6>2. A Garantia da "Dobradinha" (Fidelização da Base)</h6>
+                                        <p>Sem uma equipe própria fiscalizando e animando a base dos deputados estaduais
+                                            parceiros, a taxa de 40% de transferência de votos vira pó.</p>
+                                        <p>Esses 100 mobilizadores são os "fiscais do acordo".</p>
+                                        <p>Eles garantem que o nome e o número do candidato a Federal sejam entregues e
+                                            defendidos com a mesma energia que o do candidato a Estadual em todas as
+                                            bases.</p>
+                                    </div>
+                                </div>
+
+                                <button class="btn-read-more" onclick="toggleReadMore(this)">
+                                    <span>Leia Mais</span>
+                                    <svg viewBox="0 0 24 24" fill="none" class="chevron">
+                                        <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Total Federal -->
+            <div class="federal-total animate-card" style="--delay: 0.8s">
+                <div class="federal-total-inner">
+                    <span class="federal-total-label">TOTAL ESTRUTURA COMPARTILHADA (FEDERAL)</span>
+                    <span class="federal-total-value">R$ 492.500</span>
+                    <span class="federal-total-range">Faixa: R$ 443k — R$ 542k</span>
+                </div>
+            </div>
+
+            <!-- ═══════════════════════════════ DNA TÁTICO ═══════════════════════════════ -->
+            <div class="dna-tatico-section animate-card" style="--delay: 1.0s">
+                <div class="dna-header">
+                    <h3 class="dna-title">DNA Tático: Projeto Pé Direito vs. Modelo Tradicional</h3>
+                </div>
+
+                <div class="dna-content">
+                    <!-- Radar Chart SVG Container -->
+                    <div class="dna-chart-container"
+                        style="position: relative; width: 100%; min-height: 400px; display: flex; align-items: center; justify-content: center;">
+                        <!-- The Tooltip -->
+                        <div id="radar-tooltip" class="radar-tooltip"></div>
+
+                        <svg viewBox="0 0 600 400" preserveAspectRatio="xMidYMid meet" class="radar-svg"
+                            style="width: 100%; height: auto; max-width: 100%;">
+                            <!-- Background Circles/Grid -->
+                            <line x1="300.0" y1="200.0" x2="300.0" y2="90.0" stroke="#334155" stroke-width="1" />
+                            <line x1="300.0" y1="200.0" x2="404.6" y2="166.0" stroke="#334155" stroke-width="1" />
+                            <line x1="300.0" y1="200.0" x2="364.7" y2="289.0" stroke="#334155" stroke-width="1" />
+                            <line x1="300.0" y1="200.0" x2="235.3" y2="289.0" stroke="#334155" stroke-width="1" />
+                            <line x1="300.0" y1="200.0" x2="195.4" y2="166.0" stroke="#334155" stroke-width="1" />
+                            <polygon points="300.0,178.0 320.9,193.2 312.9,217.8 287.1,217.8 279.1,193.2" fill="none"
+                                stroke="#334155" stroke-width="1" />
+                            <polygon points="300.0,156.0 341.8,186.4 325.9,235.6 274.1,235.6 258.2,186.4" fill="none"
+                                stroke="#334155" stroke-width="1" />
+                            <polygon points="300.0,134.0 362.8,179.6 338.8,253.4 261.2,253.4 237.2,179.6" fill="none"
+                                stroke="#334155" stroke-width="1" />
+                            <polygon points="300.0,112.0 383.7,172.8 351.7,271.2 248.3,271.2 216.3,172.8" fill="none"
+                                stroke="#334155" stroke-width="1" />
+                            <polygon points="300.0,90.0 404.6,166.0 364.7,289.0 235.3,289.0 195.4,166.0" fill="none"
+                                stroke="#334155" stroke-width="1" />
+
+                            <!-- Tradicional -->
+                            <polygon points="300.0,167.0 320.9,193.2 325.9,235.6 267.7,244.5 258.2,186.4" fill="#8b5cf6"
+                                fill-opacity="0.4" stroke="#8b5cf6" stroke-width="2"
+                                style="transition: opacity 0.3s;" />
+
+                            <!-- Pé Direito -->
+                            <polygon points="300.0,95.5 404.6,166.0 358.2,280.1 241.8,280.1 200.6,167.7" fill="#22c55e"
+                                fill-opacity="0.5" stroke="#22c55e" stroke-width="3"
+                                style="filter: drop-shadow(0 0 10px rgba(34,197,94,0.5)); transition: opacity 0.3s;" />
+
+                            <!-- Labels with hit areas (Interactive) -->
+                            <g class="radar-interactive-group" data-idx="0"
+                                style="cursor: pointer; pointer-events: all; transition: transform 0.2s;">
+                                <text x="300.0" y="50.0" text-anchor="middle" fill="#cbd5e1" font-size="12"
+                                    font-weight="600" font-family="Inter, sans-serif" class="radar-label"
+                                    style="pointer-events: none;">Onipresença Logística (Aérea)</text>
+                                <circle cx="300.0" cy="90.0" r="40" fill="transparent" />
+                            </g>
+                            <g class="radar-interactive-group" data-idx="1"
+                                style="cursor: pointer; pointer-events: all; transition: transform 0.2s;">
+                                <text x="458.9" y="166.4" text-anchor="start" fill="#cbd5e1" font-size="12"
+                                    font-weight="600" font-family="Inter, sans-serif" class="radar-label"
+                                    style="pointer-events: none;">Inteligência e Dados</text>
+                                <circle cx="404.6" cy="166.0" r="40" fill="transparent" />
+                            </g>
+                            <g class="radar-interactive-group" data-idx="2"
+                                style="cursor: pointer; pointer-events: all; transition: transform 0.2s;">
+                                <text x="373.5" y="331.1" text-anchor="start" fill="#cbd5e1" font-size="12"
+                                    font-weight="600" font-family="Inter, sans-serif" class="radar-label"
+                                    style="pointer-events: none;">Força de Conversão (Rua)</text>
+                                <circle cx="364.7" cy="289.0" r="40" fill="transparent" />
+                            </g>
+                            <g class="radar-interactive-group" data-idx="3"
+                                style="cursor: pointer; pointer-events: all; transition: transform 0.2s;">
+                                <text x="226.5" y="331.1" text-anchor="end" fill="#cbd5e1" font-size="12"
+                                    font-weight="600" font-family="Inter, sans-serif" class="radar-label"
+                                    style="pointer-events: none;">Alcance Digital</text>
+                                <circle cx="235.3" cy="289.0" r="40" fill="transparent" />
+                            </g>
+                            <g class="radar-interactive-group" data-idx="4"
+                                style="cursor: pointer; pointer-events: all; transition: transform 0.2s;">
+                                <text x="141.1" y="166.4" text-anchor="end" fill="#cbd5e1" font-size="12"
+                                    font-weight="600" font-family="Inter, sans-serif" class="radar-label"
+                                    style="pointer-events: none;">Eficiência Financeira</text>
+                                <circle cx="195.4" cy="166.0" r="40" fill="transparent" />
+                            </g>
+                        </svg>
+                    </div>
+
+                    <!-- Texts & Explanations -->
+                    <div class="dna-texts">
+                        <div class="dna-legend-row">
+                            <span class="legend-color"
+                                style="background: #22c55e; border: 1px solid #22c55e; box-shadow: 0 0 8px rgba(34,197,94,0.6);"></span>
+                            <strong>Projeto Pé Direito</strong>
+                        </div>
+                        <div class="dna-legend-row">
+                            <span class="legend-color"
+                                style="background: rgba(139, 92, 246, 0.4); border: 2px solid #8b5cf6;"></span>
+                            <strong style="color: #cbd5e1;">Modelo Tradicional</strong>
+                        </div>
+
+                        <h4 class="dna-subtitle">A Superioridade da Matriz de Alocação</h4>
+                        <p class="dna-desc">
+                            A área <strong style="color: #22c55e;">verde</strong> representa o poder de fogo da nossa
+                            estrutura integrada. Enquanto campanhas tradicionais (área cinza) operam de forma isolada,
+                            lenta e baseada em intuição, o <strong>Projeto Pé Direito</strong> garante domínio
+                            territorial e digital.
+                        </p>
+
+                        <div class="dna-highlight-box">
+                            <div class="dna-highlight-icon">🎯</div>
+                            <div class="dna-highlight-text">
+                                <strong>Eficiência Financeira Comprovada:</strong> Entregamos essa máquina de guerra
+                                eleitoral a um custo otimizado de <strong>R$ 200 mil</strong> por base aliada, contra a
+                                ineficiência de <strong>R$ 373 mil</strong> da média histórica de campanhas
+                                tradicionais.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ═══════════════════════════════ PÁGINA 3 — ELITE 7 ═══════════════════════════════ -->
+        <section class="page" id="page-elite7">
+
+            <div class="section-label">
+                <span class="label-icon">⭐</span>
+                Execução de Verba — Detalhamento por Candidato (Elite 7)
+            </div>
+
+            <!-- Summary Cards -->
+            <div class="exec-summary-cards">
+                <div class="exec-summary-card animate-card" style="--delay: 0.1s">
+                    <span class="exec-summary-label">Investimento Base / Candidato</span>
+                    <span class="exec-summary-value gold-text">R$ 285.700</span>
+                    <span class="exec-summary-range">Faixa: R$ 257k — R$ 314k</span>
+                </div>
+                <div class="exec-summary-card animate-card" style="--delay: 0.2s">
+                    <span class="exec-summary-label">TOTAL 7 CAND. + 1 FEDERAL</span>
+                    <span class="exec-summary-value emerald-text">R$ 2.492.500</span>
+                    <span class="exec-summary-range">Faixa: R$ 2,24M — R$ 2,74M</span>
+                </div>
+                <div class="exec-summary-card animate-card" style="--delay: 0.3s">
+                    <span class="exec-summary-label">Foco</span>
+                    <span class="exec-summary-value" style="color: #38BDF8; font-size: 1rem; line-height: 1.2;">Alta
+                        Performance e<br>Precisão de Dados</span>
+                    <span class="exec-summary-range">Estratégia orientada por inteligência</span>
+                </div>
+            </div>
+
+            <!-- Expense Table -->
+            <div class="table-container animate-card" style="--delay: 0.4s">
+                <div class="table-header-row">
+                    <h3>Tabela de Gastos por Rubrica — Elite 7</h3>
+                    <span class="table-badge">Margem de Segurança: ± 10%</span>
+                </div>
+                <div class="table-scroll">
+                    <table class="expense-table">
+                        <thead>
+                            <tr>
+                                <th class="th-rubrica">Rubrica</th>
+                                <th class="th-desc">Descrição</th>
+                                <th class="th-value">Investimento Base (R$)</th>
+                                <th class="th-range">Margem ± 10%</th>
+                                <th class="th-bar">Peso</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row-highlight">
+                                <td>
+                                    <div class="rubrica-cell"
+                                        data-detail="Gerenciamento de anúncios (Meta Ads/Google Ads), assinatura de plataformas de disparo em massa (WhatsApp API), licenciamento de software de edição, criação de Landing Pages segmentadas, SEO político e monitoramento de menções em tempo real.">
+                                        <span class="rubrica-icon premium"
+                                            style="background: rgba(99,102,241,0.1); color: #818CF8;">
+                                            <svg class="premium-icon" viewBox="0 0 24 24">
+                                                <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                                                <polyline points="16 6 12 2 8 6" />
+                                                <line x1="12" y1="2" x2="12" y2="15" />
+                                            </svg>
+                                        </span>
+                                        Propaganda e Digital
+                                    </div>
+                                </td>
+                                <td class="td-desc">Impulsionamento (Meta/Google), Sites, Disparos de Mensagens e
+                                    Estratégia Digital</td>
+                                <td class="td-value"><strong>R$ 71.425</strong></td>
+                                <td class="td-range">R$ 64,3k — R$ 78,6k</td>
+                                <td class="td-bar">
+                                    <div class="mini-bar">
+                                        <div class="mini-bar-fill"
+                                            style="width: 20.1%; background: linear-gradient(90deg, #818CF8, #6366F1);">
+                                        </div>
+                                    </div>
+                                    <span class="bar-pct">20,1%</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="rubrica-cell"
+                                        data-detail="Honorários de assessoria jurídica e contábil eleitoral, equipe de mobilização de rua (cabos eleitorais), secretariado administrativo, suporte de TI 24/7 para o App Pé Direito e coordenadores de voluntariado.">
+                                        <span class="rubrica-icon premium"
+                                            style="background: rgba(212,175,55,0.1); color: #D4AF37;">
+                                            <svg class="premium-icon" viewBox="0 0 24 24">
+                                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                                <circle cx="9" cy="7" r="4" />
+                                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                            </svg>
+                                        </span>
+                                        Capital Humano e Operação
+                                    </div>
+                                </td>
+                                <td class="td-desc">Equipe de Rua, Secretariado, TI e Coordenação</td>
+                                <td class="td-value"><strong>R$ 64.282</strong></td>
+                                <td class="td-range">R$ 57,9k — R$ 70,7k</td>
+                                <td class="td-bar">
+                                    <div class="mini-bar">
+                                        <div class="mini-bar-fill"
+                                            style="width: 18.1%; background: linear-gradient(90deg, #D4AF37, #F0D060);">
+                                        </div>
+                                    </div>
+                                    <span class="bar-pct">18,1%</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="rubrica-cell"
+                                        data-detail="Compra de bases de dados georreferenciadas, softwares de análise de sentimento (Social Listening), confecção de mapas de calor por zona eleitoral, pesquisas de opinião quantitativas/qualitativas e mineração de dados para identificação de indecisos.">
+                                        <span class="rubrica-icon premium"
+                                            style="background: rgba(56,189,248,0.1); color: #38BDF8;">
+                                            <svg class="premium-icon" viewBox="0 0 24 24">
+                                                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                                            </svg>
+                                        </span>
+                                        Inteligência e Dados
+                                    </div>
+                                </td>
+                                <td class="td-desc">Big Data, Mapeamento Cirúrgico e Análise de Micro-segmentação</td>
+                                <td class="td-value"><strong>R$ 57.140</strong></td>
+                                <td class="td-range">R$ 51,4k — R$ 62,9k</td>
+                                <td class="td-bar">
+                                    <div class="mini-bar">
+                                        <div class="mini-bar-fill"
+                                            style="width: 16.0%; background: linear-gradient(90deg, #38BDF8, #0EA5E9);">
+                                        </div>
+                                    </div>
+                                    <span class="bar-pct">16,0%</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="rubrica-cell"
+                                        data-detail="Impressão de santinhos (gramaturas variadas), produção de praguinhas e adesivos perfurados para veículos, confecção de windbanners e bandeiras de alta resistência, instalação de placas em comitês e locação de cavaletes.">
+                                        <span class="rubrica-icon premium"
+                                            style="background: rgba(80,200,120,0.1); color: #50C878;">
+                                            <svg class="premium-icon" viewBox="0 0 24 24">
+                                                <path
+                                                    d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.57 3.91a2 2 0 0 0 1.66 0l8.57-3.9a1 1 0 0 0 0-1.83Z" />
+                                                <path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65" />
+                                                <path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65" />
+                                            </svg>
+                                        </span>
+                                        Material Físico e Visibilidade
+                                    </div>
+                                </td>
+                                <td class="td-desc">Santinhos, Adesivos, Bandeiras e Placas</td>
+                                <td class="td-value"><strong>R$ 50.000</strong></td>
+                                <td class="td-range">R$ 45k — R$ 55k</td>
+                                <td class="td-bar">
+                                    <div class="mini-bar">
+                                        <div class="mini-bar-fill"
+                                            style="width: 14.0%; background: linear-gradient(90deg, #50C878, #34D399);">
+                                        </div>
+                                    </div>
+                                    <span class="bar-pct">14,0%</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="rubrica-cell"
+                                        data-detail="Combustível (Gasolina/Diesel), depreciação e manutenção preventiva de veículos, seguro de frota temporário, alimentação de equipes externas (diárias), locação de espaços para reuniões rápidas e pedágios em rotas estratégicas.">
+                                        <span class="rubrica-icon premium"
+                                            style="background: rgba(251,146,60,0.1); color: #FB923C;">
+                                            <svg class="premium-icon" viewBox="0 0 24 24">
+                                                <rect x="1" y="3" width="15" height="13" />
+                                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                                                <circle cx="5.5" cy="18.5" r="2.5" />
+                                                <circle cx="18.5" cy="18.5" r="2.5" />
+                                            </svg>
+                                        </span>
+                                        Logística e Campo
+                                    </div>
+                                </td>
+                                <td class="td-desc">Combustível, Alimentação e Segurança</td>
+                                <td class="td-value"><strong>R$ 28.570</strong></td>
+                                <td class="td-range">R$ 25,7k — R$ 31,4k</td>
+                                <td class="td-bar">
+                                    <div class="mini-bar">
+                                        <div class="mini-bar-fill"
+                                            style="width: 8.0%; background: linear-gradient(90deg, #FB923C, #F97316);">
+                                        </div>
+                                    </div>
+                                    <span class="bar-pct">8,0%</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="rubrica-cell"
+                                        data-detail="Gestão de crises de imagem, reparos emergenciais em infraestrutura de som, variação súbita no preço de insumos gráficos, multas administrativas leves e reforço de contingência em segurança para eventos de grande porte.">
+                                        <span class="rubrica-icon premium"
+                                            style="background: rgba(168,85,247,0.1); color: #A855F7;">
+                                            <svg class="premium-icon" viewBox="0 0 24 24">
+                                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                            </svg>
+                                        </span>
+                                        Fundo de Imprevistos
+                                    </div>
+                                </td>
+                                <td class="td-desc">Reserva de contingência operacional</td>
+                                <td class="td-value"><strong>R$ 14.283</strong></td>
+                                <td class="td-range">R$ 12,9k — R$ 15,7k</td>
+                                <td class="td-bar">
+                                    <div class="mini-bar">
+                                        <div class="mini-bar-fill"
+                                            style="width: 4.0%; background: linear-gradient(90deg, #A855F7, #9333EA);">
+                                        </div>
+                                    </div>
+                                    <span class="bar-pct">4,0%</span>
+                                </td>
+                            </tr>
+                            <tr class="row-shared">
+                                <td>
+                                    <div class="rubrica-cell" data-detail="Logística Aérea e Mobilização Regional Hubs">
+                                        <span class="rubrica-icon premium"
+                                            style="background: rgba(236,72,153,0.1); color: #ec4899;">
+                                            <svg class="premium-icon" viewBox="0 0 24 24">
+                                                <path d="M12 2L2 22l10-5 10 5L12 2z" />
+                                            </svg>
+                                        </span>
+                                        Estrutura Compartilhada (Federal)
+                                    </div>
+                                </td>
+                                <td class="td-desc">Logística Aérea e Mobilização Regional Hubs</td>
+                                <td class="td-value"><strong>R$ 492.500</strong></td>
+                                <td class="td-range">-</td>
+                                <td class="td-bar">
+                                    <div class="mini-bar">
+                                        <div class="mini-bar-fill"
+                                            style="width: 19.8%; background: linear-gradient(90deg, #ec4899, #f472b6);">
+                                        </div>
+                                    </div>
+                                    <span class="bar-pct">19,8%</span>
+                        </tbody>
+                        <tfoot>
+                            <tr class="total-row">
+                                <td colspan="2"><strong>TOTAL POR CANDIDATO</strong></td>
+                                <td class="td-value"><strong class="gold-text">R$ 285.700</strong></td>
+                                <td class="td-range"><strong>R$ 257k — R$ 314k</strong></td>
+                                <td class="td-bar"><span class="bar-pct"
+                                        style="color: #D4AF37; font-weight: 700;">100%</span></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Donut Chart -->
+            <div class="donut-section animate-card" style="--delay: 0.5s">
+                <h3>Composição do Investimento — Elite 7</h3>
+                <p class="donut-subtitle">Distribuição por rubrica — por candidato</p>
+                <div class="donut-container">
+                    <svg class="donut-chart" viewBox="0 0 200 200">
+                        <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(255,255,255,0.05)"
+                            stroke-width="30" />
+                        <!-- Propaganda 20.1% = 101.03 -->
+                        <circle cx="100" cy="100" r="80" fill="none" stroke="#6366F1" stroke-width="30"
+                            stroke-dasharray="101.03 401.62" stroke-dashoffset="101.03" class="donut-segment" />
+                        <!-- Capital Humano 18.1% = 90.98 -->
+                        <circle cx="100" cy="100" r="80" fill="none" stroke="#D4AF37" stroke-width="30"
+                            stroke-dasharray="90.98 411.67" stroke-dashoffset="0" class="donut-segment" />
+                        <!-- Inteligência 16.0% = 80.42 -->
+                        <circle cx="100" cy="100" r="80" fill="none" stroke="#38BDF8" stroke-width="30"
+                            stroke-dasharray="80.42 422.23" stroke-dashoffset="-90.98" class="donut-segment" />
+                        <!-- Material 14.0% = 70.37 -->
+                        <circle cx="100" cy="100" r="80" fill="none" stroke="#50C878" stroke-width="30"
+                            stroke-dasharray="70.37 432.28" stroke-dashoffset="-171.40" class="donut-segment" />
+                        <!-- Logística 8.0% = 40.21 -->
+                        <circle cx="100" cy="100" r="80" fill="none" stroke="#FB923C" stroke-width="30"
+                            stroke-dasharray="40.21 462.44" stroke-dashoffset="-241.77" class="donut-segment" />
+                        <!-- Imprevistos 4.0% = 20.11 -->
+                        <circle cx="100" cy="100" r="80" fill="none" stroke="#A855F7" stroke-width="30"
+                            stroke-dasharray="20.11 482.54" stroke-dashoffset="-281.98" class="donut-segment" />
+                        <!-- Estrutura Compartilhada 19.8% = 99.53 -->
+                        <circle cx="100" cy="100" r="80" fill="none" stroke="#ec4899" stroke-width="30"
+                            stroke-dasharray="99.53 403.12" stroke-dashoffset="-302.09" class="donut-segment" />
+                        <text x="100" y="94" text-anchor="middle" fill="#fff" font-size="16" font-weight="700"
+                            font-family="Inter, sans-serif">R$ 2.49M</text>
+                        <text x="100" y="112" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="9"
+                            font-family="Inter, sans-serif">Global</text>
+                    </svg>
+                    <div class="donut-legend">
+                        <div class="legend-row"><span class="legend-color" style="background: #6366F1;"></span>
+                            Propaganda e Digital <span class="legend-val">20,1%</span></div>
+                        <div class="legend-row"><span class="legend-color" style="background: #D4AF37;"></span>
+                            Capital Humano <span class="legend-val">18,1%</span></div>
+                        <div class="legend-row"><span class="legend-color" style="background: #38BDF8;"></span>
+                            Inteligência e Dados <span class="legend-val">16,0%</span></div>
+                        <div class="legend-row"><span class="legend-color" style="background: #50C878;"></span>
+                            Material Físico e Visibilidade <span class="legend-val">14,0%</span></div>
+                        <div class="legend-row"><span class="legend-color" style="background: #FB923C;"></span>
+                            Logística e Campo <span class="legend-val">8,0%</span></div>
+                        <div class="legend-row"><span class="legend-color" style="background: #A855F7;"></span>
+                            Fundo de Imprevistos <span class="legend-val">4,0%</span></div>
+                        <div class="legend-row"><span class="legend-color" style="background: #ec4899;"></span>
+                            Estrutura Compartilhada <span class="legend-val">19,8%</span></div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <span>Projeto Pé Direito © 2026 — Dados Consolidados</span>
+        <span>Dashboard Executivo de Viabilidade Econômica</span>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
